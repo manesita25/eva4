@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Proyecto</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'proyectos_lista' %}">Inicio</a></li>
+            <li><a href="{% url 'agregar_proyecto' %}">Agregar Proyecto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Confirmar eliminación -->
+    <div class="container">
+        <h1>Eliminar Proyecto</h1>
+        <p>¿Estás seguro de que deseas eliminar el proyecto <strong>{{ proyecto.nombre }}</strong>?</p>
+        
+        <form id="delete-project-form" method="post" action="{% url 'eliminar_proyecto' proyecto.id %}">
+            {% csrf_token %}
+            <button type="submit" class="delete-button">Eliminar</button>
+            <a href="{% url 'proyectos_lista' %}" class="cancel-button">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>

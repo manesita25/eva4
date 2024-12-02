@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Proyectos</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+
+<!-- Contenedor principal -->
+<div class="container">
+    <h1>Lista de Proyectos</h1>
+
+    <!-- Botón para agregar un nuevo proyecto -->
+    <a href="{% url 'agregar_proyecto' %}" class="btn">Agregar Proyecto</a>
+
+    <table class="project-table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>RUT</th>
+                <th>Integrantes</th>
+                <th>Acciones</th> <!-- Columna para los botones -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for proyecto in proyectos %}
+            <tr>
+                <td>{{ proyecto.nombre }}</td>
+                <td>{{ proyecto.rut }}</td>
+                <td>{{ proyecto.integrantes }}</td>
+                <td>
+                    <!-- Botones de acción con las clases definidas en el CSS -->
+                    <a href="{% url 'editar_proyecto' proyecto.id %}" class="btn">Editar</a>
+                    <a href="{% url 'eliminar_proyecto' proyecto.id %}" class="btn btn-delete">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3; /* Fondo gris claro */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #ffcc99; /* Naranja pastel */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los títulos */
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Estilos para el formulario */
+form {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+form input:focus {
+    border-color: #f2a33c; /* Naranja pastel */
+    outline: none;
+    background-color: #fff;
+}
+
+form button {
+    padding: 14px 20px;
+    background-color: #f2a33c; /* Naranja más oscuro */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #d6892f; /* Naranja más oscuro al pasar el cursor */
+}
+
+/* Estilos para la tabla de proyectos */
+.project-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-table th,
+.project-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-table th {
+    background-color: #f2a33c; /* Naranja más oscuro */
+    color: white;
+}
+
+.project-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.project-table td {
+    font-size: 14px;
+}
+
+/* Estilos para el navbar */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: #FFBC80; /* Naranja pastel */
+    padding: 15px 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #FF9A56; /* Naranja más oscuro */
+}
+
+/* Estilos generales para los botones */
+.btn {
+    display: inline-block;
+    padding: 12px 20px; /* Botón más grande */
+    font-size: 16px;
+    color: #fff;
+    background-color: #f2a33c; /* Naranja más oscuro */
+    text-decoration: none;
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center;
+    transition: background-color 0.3s;
+    border: 1px solid #f2a33c; /* Borde del mismo color */
+}
+
+.btn:hover {
+    background-color: #d6892f; /* Naranja más oscuro al pasar el cursor */
+}
+
+/* Estilo para el botón de eliminar */
+.btn-delete {
+    background-color: #dc3545; /* Rojo para eliminar */
+    border: 1px solid #dc3545;
+}
+
+.btn-delete:hover {
+    background-color: #b02a37;
+}
+
+/* Estilo para el botón de editar */
+.btn-edit {
+    background-color: #007bff; /* Azul para editar */
+    border: 1px solid #007bff;
+}
+
+.btn-edit:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Estilo para el botón de cancelar en eliminar_proyecto.html */
+.cancel-button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #6c757d; /* Gris para cancelar */
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #6c757d;
+    transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+    background-color: #5a6268; /* Gris más oscuro al pasar el cursor */
+}

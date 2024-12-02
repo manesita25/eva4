@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Proyecto</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="{% url 'proyectos_lista' %}">Inicio</a></li>
+            <li><a href="{% url 'agregar_proyecto' %}">Agregar Proyecto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Formulario para agregar proyecto -->
+    <div class="container">
+        <h1>Agregar Nuevo Proyecto</h1>
+
+        <form method="POST" action="{% url 'agregar_proyecto' %}">
+            {% csrf_token %}
+            <label for="nombre">Nombre del Proyecto:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="rut">RUT de los Integrantes:</label>
+            <input type="text" id="rut" name="rut" required placeholder="Ingrese RUT de los integrantes">
+
+            <label for="integrantes">Nombre de los Integrantes:</label>
+            <input type="text" id="integrantes" name="integrantes" required placeholder="Ingrese nombres y apellidos de los integrantes">
+
+            <button type="submit">Agregar Proyecto</button>
+        </form>
+    </div>
+
+</body>
+</html>
